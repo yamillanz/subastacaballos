@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <div id="datosSubasta"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 id="nombreUsr"></h5>
+                <div class="form-group">
+                    <!-- <input type="text" class="form-control" id="nombre" placeholder="Caballo"> -->
+                    <select id="caballos" class="form-control form-control-sm"></select>
+                    <input type="number" class="form-control" id="monto" placeholder="Monto">
+                    <textarea id="observaciones" class="form-control" cols="30" rows="3"
+                        placeholder="Observaciones"></textarea>
+                </div>
+                <button id="pujar" class="btn btn-primary btn-block text-center">Pujar</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-8">
+        <h5>Mis Pujas</h5>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="width: 5%;" scope="col">Nro.</th>
+                    <th style="width: 15%;" scope="col">Caballo</th>
+                    <th style="width: 10%;" scope="col">Monto</th>
+                    <th style="width: 25%;" scope="col">Fecha</th>
+                    <!-- <th style="width: 20%;" scope="col">Observ.</th> -->
+                </tr>
+            </thead>
+            <tbody id="bodyPujas">
+                <tr class="table-dark">
+                    <td>Contenido</td>
+                    <td>Contenido</td>
+                    <td>Contenido</td>
+                    <td>Contenido</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text-right"><button id="vaciar" class="btn btn-secondary text-center">Vaciar</button></p>
+    </div>
+</div>
+
+<script src="js/ingresarMonto.js"></script>

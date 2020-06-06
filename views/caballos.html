@@ -1,0 +1,44 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <!-- <input type="text" class="form-control" id="nombre" placeholder="Caballo"> -->
+                    <input type="text" class="form-control" id="nombre" placeholder="Caballo">
+                    <textarea id="observaciones" class="form-control" cols="30" rows="3"
+                        placeholder="Observaciones"></textarea>
+                    <label for="habilitado">Habilitado</label> <input type="checkbox" id="habilitado">
+                </div>
+                <button id="ingresar" class="btn btn-primary btn-block text-center">Ingresar</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-8">
+        <h5>Caballos Registrados</h5>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="width: 5%;" scope="col">Nro.</th>
+                    <th style="width: 15%;" scope="col">Caballo</th>
+                    <th style="width: 25%;" scope="col">Fecha</th>
+                    <th style="width: 20%;" scope="col">Observ.</th>
+                    <th style="width: 10%;" scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="bodyCaballos">
+                <tr class="table-dark">
+                    <td>Contenido</td>
+                    <td>Contenido</td>
+                    <td>Contenido</td>
+                    <td>Contenido</td>
+                    <td>Contenido</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <p class="text-right"><button id="vaciar" class="btn btn-secondary text-center">Vaciar</button></p> -->
+
+    </div>
+</div>
+
+<script src="js/admCaballos.js"></script>
