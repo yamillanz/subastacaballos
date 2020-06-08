@@ -8,7 +8,7 @@ function cargar_caballos() {
         caballos.forEach(caballo => {
             classhab = caballo.habilitado == "1" ? "btn-outline-success" : "btn-outline-danger"
             html += `
-            <tr class="table-dark" idcaballo=${caballo.id}>
+            <tr class="table-dark" idcaballo=${caballo.id} hab=${caballo.habilitado}>
                 <td>${caballo.id}</td>
                 <td>${caballo.nombre}</td>
                 <td>${caballo.creacion}</td>
@@ -48,5 +48,24 @@ $(document).ready(async function () {
         cargar_caballos();
     });
 
+
+    $(document).on('click', ".mybtn-delete", function (e) {
+        let idcaballo = $($(this)[0].parentElement.parentElement).attr('idcaballo');
+        $.get("back/caballos/delCaballo.php?idcaballo=" + idcaballo, (resp) => {console.log(resp);})  ;
+        //console.log("caballo", idcaballo);
+        cargar_caballos();
+    });
+
+    $(document).on('click', ".mybtn-habil", function (e) {
+        let idcaballo = $($(this)[0].parentElement.parentElement).attr('idcaballo');
+        let habili = $($(this)[0].parentElement.parentElement).attr('hab');
+        const dataPost = {
+            idcaballo: idcaballo,
+            habilitado: habili == 0 ? 1 : 0
+        }
+        //console.log("data", dataPost);
+        $.post("back/caballos/habilitarCaballo.php", dataPost, (resp)=>{console.log(resp);});
+        cargar_caballos();
+    });
 
 })

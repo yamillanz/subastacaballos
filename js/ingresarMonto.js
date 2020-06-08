@@ -4,7 +4,9 @@ async function cargar_select() {
     //caballosActivos = JSON.parse(caballosActivos);
     //console.log("caballos", caballosActivos)
     var select = document.getElementById("caballos"); //Seleccionamos el select
-
+    select.innerHTML = "";
+    console.log("llamo");
+    
     for (var i = 0; i < caballosActivos.length; i++) {
         var option = document.createElement("option"); //Creamos la opcion
         option.innerHTML = caballosActivos[i].nombre; //Metemos el texto en la opción
@@ -84,6 +86,8 @@ $(document).ready( async function () {
     intervalo = setInterval(async () => {
         getDataMasAlta("#datosSubasta");
         $("#pujar").prop('disabled', (await verifyCaballoSubastado()));
+        cargar_select();
+        getDataMasAlta("#datosSubasta");
         //console.log("LLamo!!!");
         
     }, 3000)
