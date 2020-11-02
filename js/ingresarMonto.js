@@ -5,7 +5,7 @@ async function cargar_select() {
     //console.log("caballos", caballosActivos)
     var select = document.getElementById("caballos"); //Seleccionamos el select
     select.innerHTML = "";
-    console.log("llamo");
+    //console.log("llamo");
     
     for (var i = 0; i < caballosActivos.length; i++) {
         var option = document.createElement("option"); //Creamos la opcion
