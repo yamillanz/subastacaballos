@@ -15,7 +15,7 @@ const ajustaNavegacion = () => {
             barraLogin.appendChild(option);
             $("#logout").click(function () {
                 localStorage.clear();
-                window.location = "/rematecaballos";
+                window.location = "/subastacaballos";
 
             })
 

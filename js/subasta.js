@@ -85,7 +85,7 @@ $(document).ready(async function () {
     intervalo = setInterval(async () => {
         getDataMasAlta("#datosSubasta");
         setearTablaSubastas("#bodyPujas");
-        console.log("llamo");
+        //console.log("llamo");
         const caballo = await caballoSubastado();
         if (caballo.length <= 0) {
             $("#btnPararSubasta").prop('disabled', true);

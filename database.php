@@ -14,10 +14,10 @@ class db
 
     function __construct()
     {
-        $this->host =  "localhost";
+        $this->host =  "157.230.216.250";//"localhost";
         $this->db = "remates";
         $this->user = "root";
-        $this->password =  "root";
+        $this->password =  "Acceso01.."; //".4C3r04dm1n";
         $this->port = "3306";
     }
 
